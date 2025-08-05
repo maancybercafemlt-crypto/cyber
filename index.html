@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Cafe Help Line</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <h1>CYBER CAFE HELP LINE</h1>
+    <button id="loginBtn" onclick="showLogin()">Log in</button>
+    <button id="logoutBtn" onclick="logout()" style="display:none;">Logout</button>
+  </header>
+
+  <main id="mainContent">
+    <section class="hero">
+      <div>
+        <h2>Welcome to Cyber Cafe Help Line</h2>
+        <p>We provide a range of computer and internet services to meet your needs. Connect with us for reliable and efficient solutions.</p>
+      </div>
+      <img src="https://img.icons8.com/ios-filled/100/computer.png" alt="Cyber Icon"/>
+    </section>
+
+    <section class="rates">
+      <h2>Rate List</h2>
+      <table id="rateTable">
+        <thead>
+          <tr><th>Service</th><th>Price</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><input value="Browsing"/></td><td><input value="₹80/hour"/></td></tr>
+          <tr><td><input value="Print (per page)"/></td><td><input value="₹5/page"/></td></tr>
+          <tr><td><input value="Scan"/></td><td><input value="₹10 each"/></td></tr>
+          <tr><td><input value="Lamination"/></td><td><input value="₹20 each"/></td></tr>
+        </tbody>
+      </table>
+      <div id="rateActions" style="display:none;">
+        <button onclick="saveRates()">Save</button>
+        <button onclick="resetRates()">Reset</button>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>📞 7814903334</p>
+      <p>📧 jaidiyakingak47@gmaail.com</p>
+    </section>
+
+    <section class="chatbox">
+      <h2>Chat with Admin</h2>
+      <div class="chat-container">
+        <div class="chat-users">
+          <p><strong>John Doe</strong><br/>Hello, I need some help<br/><small>12:30 PM</small></p>
+          <p><strong>Jane Smith</strong><br/>Sure, what do you need?<br/><small>11:45 AM</small></p>
+        </div>
+        <div class="chat-messages">
+          <div class="msg left">Hello, I need some help <span>12:30 PM</span></div>
+          <div class="msg right">Hello! How can I assist you? <span>12:32 PM</span></div>
+          <div class="chat-input">
+            <input id="chatInput" placeholder="Type a message..."/>
+            <button onclick="sendMessage()">➤</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Login</h2>
+      <input id="email" placeholder="Email address"/><br/>
+      <input id="password" type="password" placeholder="Password"/><br/>
+      <a href="#">Forgot password?</a><br/>
+      <button onclick="login()">Log in</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
